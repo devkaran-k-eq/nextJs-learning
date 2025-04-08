@@ -1,8 +1,18 @@
 import Link from "next/link";
 
+export const dynamicParams = false;
+export const revalidate = 5;
+
+export async function generateStaticParams() {
+    const response = await fetch("https://jsonplaceholder.typicode.com/todos")
+    const data = await response.json();
+    console.log(data);
+    return data.map( ({id}) => ({blogID: `${id}`}))
+}
+
 const Blog = async ({ params }) => {
-    const { blogs } = await params;
-    console.log(blogs);
+    const { blogID } = await params;
+    console.log("Blog in dev: ", blogID);
 
     return (
         <>
@@ -31,8 +41,9 @@ const Blog = async ({ params }) => {
                 </ul>
             </nav>
 
-            <h1>Welcome to our {blogs} Page</h1>
-            <h2 style={{textAlign: "center"}}>This is Blog {blogs}. Page</h2>
+            <h1>Welcome to our {blogID} Page</h1>
+            <h2 style={{ textAlign: "center" }}>This is Blog {blogID}. Page</h2>
+            <h2 style={{ textAlign: "center" }}>{new Date().toString()}</h2>
 
         </>
     );
