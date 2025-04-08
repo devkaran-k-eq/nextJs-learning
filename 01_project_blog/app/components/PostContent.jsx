@@ -104,8 +104,6 @@ export default function PostContent({ params }) {
                             </span>
                         </div>
                         <div className="pl-1">
-
-
                             {
                                 (matchPost?.["organization"]?.["name"] === undefined) ? " " : (
                                     <>
@@ -117,8 +115,6 @@ export default function PostContent({ params }) {
                                     </>
                                 )
                             }
-
-
                         </div>
                     </div>
 
