@@ -19,7 +19,7 @@ export function BlogContextProvider({ children }) {
                     setPosts(data)
                     setLoading(false)
                     setVideos(videoData)
-                    // console.log(posts);
+                    console.log(posts);
                     console.log("Videos", videos);
                 } catch (error) {
                     console.error("Error in fetching Posts")

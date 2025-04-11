@@ -45,10 +45,6 @@ export default function PostContent({ params }) {
     }
 
 
-
-
-
-
     if (!matchPost) {
         return <p>No Posts Available</p>;
     }

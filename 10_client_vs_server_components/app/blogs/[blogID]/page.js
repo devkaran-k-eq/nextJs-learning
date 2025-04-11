@@ -1,18 +1,18 @@
 import Link from "next/link";
 
-export const dynamicParams = false;
-export const revalidate = 10;
+// export const dynamicParams = false;
+// export const revalidate = 5;
 
-export async function generateStaticParams() {
-    const response = await fetch("https://jsonplaceholder.typicode.com/todos")
-    const data = await response.json();
-    console.log(data);
-    return data.map( ({id}) => ({blogID: `${id}`}))
-}
+// export async function generateStaticParams() {
+    // const response = await fetch("https://jsonplaceholder.typicode.com/todos")
+    // const data = await response.json();
+    // console.log(data);
+    // return data.map( ({id}) => ({blogID: `${id}`}))
+// }
 
 const Blog = async ({ params }) => {
     const { blogID } = await params;
-    console.log("Blog in dev: ", blogID);
+    // console.log("Blog in dev: ", blogID);
 
     return (
         <>
