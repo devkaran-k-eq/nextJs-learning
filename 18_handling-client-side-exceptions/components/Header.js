@@ -7,11 +7,8 @@ import MoonIcon from "./MoonIcon";
 import { useTheme } from "@/context/ThemeContext";
 
 export default function Header() {
-  
   const pathname = usePathname();
-  
   const { isDark, toggleTheme } = useTheme();
-
   return (
     <nav className="navbar">
       <ul>
@@ -33,19 +30,17 @@ export default function Header() {
         </li>
         <li>
           <Link
-            href="/services"
+            href="/blogs"
             className={
-              pathname === "/services" ? "nav-link active" : "nav-link"
+              pathname.startsWith("/blogs") ? "nav-link active" : "nav-link"
             }
           >
-            Services
+            Blogs
           </Link>
         </li>
       </ul>
 
-      <button
-        onClick={toggleTheme} 
-      >
+      <button onClick={toggleTheme}>
         {isDark ? <SunIcon /> : <MoonIcon />}
       </button>
     </nav>
