@@ -14,12 +14,12 @@ const Posts = async () => {
         {todos.map(({ id, title, completed }) => (
           <div className="todo-item" key={id}>
             <input type="checkbox" checked={completed} readOnly />
-            <p>{title}</p>
+            <p>{title}</p>` `
           </div>
         ))}
       </div>
     </>
   );
 };
-
+ hugfu    
 export default Posts;

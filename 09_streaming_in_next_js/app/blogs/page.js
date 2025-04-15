@@ -4,8 +4,13 @@ import Likes from "@/components/Likes";
 import Views from "@/components/Views";
 import Link from "next/link";
 import { Suspense } from "react";
+import { ViewsInServer } from "@/components/Views";
 
-const ViewsInServer = React.lazy(() => import("@/components/Views"));
+// const ViewsInServer = React.lazy(() => import("@/components/Views"));
+
+
+
+
 
 const Blogs = () => {
 
@@ -45,7 +50,8 @@ const Blogs = () => {
                 <Suspense fallback={<div>Loading Likes...</div>}>
                     <Likes />
                 </Suspense>
-                <Suspense fallback={<div>Loading Comments...</div>}>
+                <Suspense fallback={<div>Loading Ramba Ramba...</div>}>
+                {/* WE CAN'T USE ASYNC IN CLIENT COMPONENT AND ALSO FOR THAT WE USE REACT.LAZY() AND DELAY AND SHOW LOADING */}
                     <Comments />
                 </Suspense>
                 <Suspense fallback={<div>Loading From Server...</div>}>
