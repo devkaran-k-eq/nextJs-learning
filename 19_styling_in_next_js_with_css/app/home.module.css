@@ -1,0 +1,15 @@
+.container {
+    background-color: purple;
+    min-height: 100vh; /* Make sure it fills the page height */
+    padding: 2rem;
+  }
+
+.title {
+    font-family: cursive;
+    font-size: 2rem;
+}
+
+.container p{
+    color: lime;
+    font-size: 2rem;
+}
