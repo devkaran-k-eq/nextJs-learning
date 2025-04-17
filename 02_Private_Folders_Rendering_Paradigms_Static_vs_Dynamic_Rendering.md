@@ -115,3 +115,46 @@ Want me to continue this notes style for more topics like:
 - Page loading lifecycle in Next.js?
 
 Let me know — I can build a whole mini Next.js beginner notes file for you 📘🚀
+
+
+Great question — and you're not making a mistake, you're just mixing **Next.js App Router methods** with **Page Router methods**.
+
+Let me explain quickly:
+
+---
+
+### 🔁 You're using `generateStaticParams`
+- ✅ This is part of the **App Router (app directory)**.
+- It replaces `getStaticPaths` from the **Pages Router**.
+- You **don’t use** `getServerSideProps` or `getStaticProps` in the **App Router**.
+
+---
+
+### 🔄 App Router Equivalents
+
+| Pages Router (Old)          | App Router (New)        |
+|-----------------------------|--------------------------|
+| `getStaticProps`            | `fetch()` in a **Server Component** |
+| `getServerSideProps`        | Use **Server Component** logic or `cache: 'no-store'` |
+| `getStaticPaths`            | `generateStaticParams`  |
+
+---
+
+### ✅ Are You on the Right Path?
+
+Yes, **if you're using the App Router**, then using `generateStaticParams` is 100% correct.
+
+But just keep in mind:
+- You don’t mix `getServerSideProps`, `getStaticProps`, etc., **in the App Router**.
+- Those are for the **Pages Router** (which uses the `pages/` folder).
+
+---
+
+### 🔧 What You Should Do
+
+- Stick to **either** App Router (`app/`) **or** Pages Router (`pages/`) to avoid confusion.
+- In App Router:
+  - Use **Server Components** for SSR and SSG behavior.
+  - Use `generateStaticParams` for dynamic SSG routes.
+
+Let me know which router you're using (App or Pages), and I can guide you more specifically.
