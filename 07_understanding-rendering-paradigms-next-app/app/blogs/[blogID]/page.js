@@ -7,7 +7,7 @@ export async function generateStaticParams() {
     const response = await fetch("https://jsonplaceholder.typicode.com/todos")
     const data = await response.json();
     console.log(data);
-    return data.map( ({id}) => ({blogID: `${id}`}))
+    return data.map(({ id }) => ({ blogID: `${id}` }))
 }
 
 const Blog = async ({ params }) => {

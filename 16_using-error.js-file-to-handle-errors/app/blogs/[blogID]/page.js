@@ -8,22 +8,19 @@ async function getData() {
 
 const Blog = async ({ params }) => {
   const { blogID } = await params;
-  
+
   const randomNumber = await getData();
   // const randomNumber = Math.random();
 
-
   console.log(randomNumber);
-  if(randomNumber < 0.5){
+  if (randomNumber < 0.5) {
     throw new Error("Error becuase it is Greater Than 0.5");
   }
 
   return (
     <>
-      <div>
-        <h1>Welcome to Our Blog {blogID}</h1>
-        <p>This is blog {blogID} page.</p>
-      </div>
+      <h1>Welcome to Our Blog {blogID}</h1>
+      <p>This is blog {blogID} page.</p>
     </>
   );
 };

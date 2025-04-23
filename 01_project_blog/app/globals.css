@@ -3,7 +3,7 @@
 :root {
   --background: #e3dbdb;
   /* --background: #d33131; */
-  --foreground: #171717;
+  --foreground: #000000;
 }
 
 /* @theme inline {
@@ -13,16 +13,16 @@
   --font-mono: var(--font-geist-mono);
 } */
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
     --foreground: #e3dbdb;
   }
-}
+} */
 
 body {
   background: #e3dbdb;
-  color: var(--foreground);
+  color: black;
   font-family: Arial, Helvetica, sans-serif;
   max-width: 1200px;
   margin: 0 auto;

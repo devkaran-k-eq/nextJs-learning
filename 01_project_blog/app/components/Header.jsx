@@ -4,7 +4,7 @@ import Link from "next/link";
 function Header() {
 
     return (
-        <header className="py-3 shadow bg-[#97ffc8] rounded-2xl">
+        <header className="my-3 shadow bg-white rounded-2xl">
 
             <nav className="flex">
                 <div className="mr-4">

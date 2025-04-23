@@ -10,8 +10,6 @@ export async function generateMetadata({ params }) {
     }
 }
 
-
-
 export default async function FileId({ params }) {
 
     const paramsObj = await params
