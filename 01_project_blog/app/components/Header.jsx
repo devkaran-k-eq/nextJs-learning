@@ -4,13 +4,13 @@ import Link from "next/link";
 function Header() {
 
     return (
-        <header className="my-3 shadow bg-white rounded-2xl">
+        <header className="my-4 py-4 shadow bg-white rounded-2xl">
 
             <nav className="flex">
                 <div className="mr-4">
                     <Link href={`/`}>
 
-                        <img src="/crown.jpg" alt="" style={{ width: "60px" }} className="mx-2"/>
+                        <img src="/crown.jpg" alt="" style={{ width: "50px" }} className="mx-2"/>
                     </Link>
                 </div>
 

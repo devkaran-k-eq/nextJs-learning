@@ -1,7 +1,6 @@
 import { Geist, Geist_Mono } from "next/font/google";
-import "./globals.css";
-import { BlogContextProvider } from "./contexts/blogContext";
-import Header from "./components/Header";
+import "@/app/globals.css"
+import { BlogContextProvider } from "../contexts/blogContext";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -27,7 +26,6 @@ export default function RootLayout({ children }) {
         <div className="min-h-screen flex flex-wrap content-between overflow-x-hidden">
           <div className="w-full block">
             <BlogContextProvider>
-              <Header />
               {children}
             </BlogContextProvider>
           </div>

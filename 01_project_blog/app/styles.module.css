@@ -1,0 +1,35 @@
+.inputError:active {
+  background-color: rgba(0, 0, 0, 0.08) !important;
+  border-color: #8a0005 !important;
+  border-width: 1px;
+  cursor: pointer;
+}
+
+.inputError:hover {
+  background-color: rgba(0, 0, 0, 0.08) !important;
+  border-color: #8a0005;
+  border-width: 1px;
+  box-shadow: 0 0 0 1px #8a0005;
+  cursor: pointer;
+}
+
+/* styles.module.css */
+.devcustomCheckbox {
+  position: relative;
+}
+
+.devcustomCheckbox:checked {
+  background-color: #2e7d32 !important; /* Green-800 */
+  border-color: #1b5e20 !important; /* Green-900 */
+}
+
+.devcustomCheckbox:checked::before {
+  content: '✓';
+  color: white;
+  font-size: 12px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* pointer-events: none; */
+}
